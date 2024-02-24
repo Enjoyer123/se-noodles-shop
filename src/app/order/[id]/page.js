@@ -1,40 +1,39 @@
 import React from 'react'
 import Image from 'next/image'
+import styles from "./Order.module.css";
 
 function Order() {
   return (
-    <div className='p-[50px]'>
-        <div className='left flex-2'>
-            <div className='row'>
-            <table className="w-full border-separate border-spacing-1 text-center">
-          <tr className="w-10">
+    <div className={styles.container}>
+        <div className={styles.left}>
+            <div className={styles.row}>
+            <table className={styles.table}>
+          <tr className={styles.trTitle}>
             <th>Id</th>
             <th>Customer</th>
             <th>Table</th>
             <th>Total</th>
           </tr>
-          <tr>
+          <tr className={styles.tr}>
             <td>
     
-              <span className='text-lg font-medium text-red-500'>eiei</span>
+              <span className={styles.id}>eiei</span>
             </td>
             <td>
-              <span className=''>123546</span>
+              <span className={styles.name}>123546</span>
             </td>
             <td>
-              <span className=''>John</span>
+              <span className={styles.address}>John</span>
             </td>
             <td>
-              <span className=''>1</span>
+              <span className={styles.total}>1</span>
             </td>
-            <td>
-              <span className='text-lg font-medium'>50</span>
-            </td>
+    
             </tr>
             
         </table>
             </div>
-            <div className='row flex'>
+            <div className={styles.row}>
                 <div className=''>
                 
                     <img className="w-[30px] h-[30px]"src="/1.jpg"></img>
@@ -72,19 +71,19 @@ function Order() {
             </div>
             </div>
         </div>
-        <div className='rightflex-1'>
-        <div className="bg-gray-600 flex flex-col justify-between text-white items-center">
-          <h2 className="text-lg font-bold">CART TOTAL</h2>
-          <div className="">
-            <b className="mr-10">Subtotal:</b>$5
+        <div className={styles.right}>
+        <div className={styles.wrapper}>
+          <h2 className={styles.title}>CART TOTAL</h2>
+          <div className={styles.totalText}>
+            <b className={styles.totalTextTitle}>Subtotal:</b>$5
           </div>
-          <div>
-            <b className="mr-10">Discount:</b>$5
+          <div className={styles.totalText}>
+            <b className={styles.totalTextTitle}>Discount:</b>$5
           </div>
-          <div>
-            <b className="mr-10">Total:</b>$5
+          <div className={styles.totalText}>
+            <b className={styles.totalTextTitle}>Total:</b>$5
           </div>
-          <button className="h-[30px] text-orange-600 font-bold cursor-pointer mt-20">PAID</button>
+          <button className={styles.button}>PAID</button>
         </div>
         </div>
     </div>

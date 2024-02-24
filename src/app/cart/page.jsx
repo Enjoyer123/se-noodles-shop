@@ -1,117 +1,69 @@
 import styles from "./cart.module.css"
-
+import Image from "next/image"
 function cart() {
   return (
-    <div className=" p-[50px]">
-      <div className='flex'>
-        <table className="w-full border-separate border-spacing-1 text-center">
-          <tr className="w-10">
-            <th className="w-10">Product</th>
-            <th>Name</th>
+    <>
+    <div className={styles.container}>
+      <div className={styles.left}>
+        <table className={styles.table}>
+          <tbody>
+          <tr className={styles.trTitle}>
+            <th>Product</th>
+            <th>Table</th>
             <th>Extras</th>
             <th>Price</th>
             <th>Quantity</th>
             <th>Total</th>
           </tr>
-          <tr>
+          </tbody>
+          <tbody>
+          <tr className={styles.tr}>
             <td>
-              
-                <img
-                className="m-auto w-[200px] h-auto"
-                  src="/2.jpg"     
-                  alt=""
-                  /> 
-             
+              <div className={styles.imgContainer}>
+                <Image src="/2.jpg" layout="fill" objectFit="cover" alt=""/>
+              </div>
             </td>
-            <td>
-    
-              <span className='text-lg font-medium text-red-500'>eiei</span>
-            </td>
-            <td>
-              <span className=''>veget</span>
-            </td>
-            <td>
-              <span className=''>5</span>
-            </td>
-            <td>
-              <span className=''>1</span>
-            </td>
-            <td>
-              <span className='text-lg font-medium'>5</span>
-            </td>
-            </tr>
-            <tr>
-            <td>
-              
-                <img
-                className="m-auto w-[200px] h-auto"
-                  src="/2.jpg"     
-                  alt=""
-                  /> 
-             
-            </td>
-            <td>
-    
-              <span className='text-lg font-medium text-red-500'>eiei</span>
-            </td>
-            <td>
-              <span className=''>veget</span>
-            </td>
-            <td>
-              <span className=''>5</span>
-            </td>
-            <td>
-              <span className=''>1</span>
-            </td>
-            <td>
-              <span className='text-lg font-medium'>5</span>
-            </td>
-            </tr><tr>
             <td>
 
-                <img
-                className="m-auto w-[200px] h-auto"
-                  src="/2.jpg"     
-                  alt=""
-                  /> 
-             
+              <span className={styles.name}>5</span>
             </td>
             <td>
-    
-              <span className='text-lg font-medium text-red-500'>eiei</span>
+              <span className={styles.extras}>veget</span>
             </td>
             <td>
-              <span className=''>veget</span>
+              <span className={styles.price}>5</span>
             </td>
             <td>
-              <span className=''>5</span>
+              <span className={styles.quantity}>1</span>
             </td>
             <td>
-              <span className=''>1</span>
+              <span className={styles.total}>5
+              </span>
             </td>
-            <td>
-              <span className='text-lg font-medium'>5</span>
-            </td>
-            </tr>
+          </tr>
+        
+          </tbody>
         </table>
       </div>
-      <div className="flex-1">
-        <div className="bg-gray-600 flex flex-col justify-between text-white items-center">
-          <h2 className="text-lg font-bold">CART TOTAL</h2>
-          <div className="">
-            <b className="mr-10">Subtotal:</b>$5
-          </div>
-          <div>
-            <b className="mr-10">Discount:</b>$5
-          </div>
-          <div>
-            <b className="mr-10">Total:</b>$5
-          </div>
-          <button className="h-[30px] text-orange-600 font-bold cursor-pointer mt-20">CHECKOUT NOW</button>
-        </div>
-      </div>
+      
     </div>
-    
+    <div className={styles.right}>
+    <div className={styles.wrapper}>
+      <h2 className={styles.title}>CART TOTAL</h2>
+      <div className={styles.totalText}>
+        <b className={styles.totalTextTitle}>Subtotal:</b>$5
+      </div>
+      <div className={styles.totalText}>
+        <b className={styles.totalTextTitle}>Discount:</b>$5
+      </div>
+      <div className={styles.totalText}>
+        <b className={styles.totalTextTitle}>Total:</b>$5
+      </div>
+      <button className={styles.button}>CHECKOUT NOW</button>
+    </div>
+  </div>
+  </>
+
   )
 }
 
