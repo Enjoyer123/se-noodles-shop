@@ -1,6 +1,8 @@
+// ProductsList.jsx
 import NoodleCard from "./NoodleCard";
 
-const NoodleList = () => {
+const ProductsList = ({ noodleList }) => {
+  //console.log("r ",noodleList)
   return (
     <div className="mt-16 container mx-auto">
       <h1 className="text-center text-3xl font-bold mb-4">THE BEST NOODLE</h1>
@@ -12,23 +14,12 @@ const NoodleList = () => {
         sit amet, consectetur adipiscing elit.
       </p>
       <div className="flex flex-wrap justify-center">
-       
-          <NoodleCard />
-          <NoodleCard />
-          <NoodleCard />
-          <NoodleCard />
-          <NoodleCard />
-          <NoodleCard />
-          <NoodleCard />
-          <NoodleCard />
-          <NoodleCard />
-          <NoodleCard />
-          
-
-       
+      {noodleList.map((noodle) => (
+          <NoodleCard key={noodle._id} noodle={noodle} />
+        ))} 
       </div>
     </div>
   );
 };
 
-export default NoodleList;
+export default ProductsList;
